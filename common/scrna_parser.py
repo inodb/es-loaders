@@ -154,6 +154,13 @@ class scRNAParser():
         assert 'Exhausted_prob' in coldata, "Exhausted probability not computed."
         return dict(zip(barcodes, coldata['Exhausted_prob']))
 
+    def get_repairtype(self):
+        # Needs to grab from a different rData file, but this is the gist of the code
+        coldata = self.data.colData
+        barcodes = self.get_cells()
+        assert 'repairtype' in coldata, "Repair type not computed."
+        return dict(zip(barcodes, coldata['repairtype']))
+
 
 if __name__ == '__main__':
     parser = scRNAParser("SPECTRUM-OV-041_S1_CD45N_INFRACOLIC_OMENTUM.rdata")

@@ -83,6 +83,8 @@ def load_dashboard_cells(data, type, dashboard_id, metadata, filepath, host="loc
     samples = data.get_samples()
     celltypes = data.get_celltypes()
     rho_celltypes = get_rho_celltypes()
+    exhausted_probability = data.get_exhausted_probability()
+    repairtype = data.get_repairtype()
 
     sample_list = [metadata.get_igo_to_sample_id(
         sample) for sample in data.get_sample_list()]
@@ -90,13 +92,13 @@ def load_dashboard_cells(data, type, dashboard_id, metadata, filepath, host="loc
         filepath, sample_list, rho_celltypes)
 
     cell_records = get_cells_generator(
-        cells, samples, celltypes, rho_celltypes, celltype_probabilities, redim, dashboard_id, metadata)
+        cells, samples, celltypes, rho_celltypes, celltype_probabilities, exhausted_probability, repairtype, redim, dashboard_id, metadata)
 
     logger.info(" BEGINNING LOAD")
     load_records(DASHBOARD_CELLS_INDEX, cell_records, host=host, port=port)
 
 
-def get_cells_generator(cells, samples, celltypes, rho_celltypes, celltype_probabilities, redim, dashboard_id, metadata):
+def get_cells_generator(cells, samples, celltypes, rho_celltypes, celltype_probabilities, exhausted_probability, repairtype, redim, dashboard_id, metadata):
 
     for cell in cells:
         [barcode, sample] = cell.split(":")
@@ -111,6 +113,8 @@ def get_cells_generator(cells, samples, celltypes, rho_celltypes, celltype_proba
             "x": redim[cell][0],
             "y": redim[cell][1],
             "sample_id": metadata.get_igo_to_sample_id(samples[cell]),
+            "exhausted_probability": exhausted_probability[cell],
+            "repair_type": repairtype[cell],
             ** cell_probabilities
         }
         yield record
