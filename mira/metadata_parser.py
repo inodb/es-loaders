@@ -20,16 +20,19 @@ SORT_ENCODER = {'singlet, live, CD45+': 'CD45P',
 class MiraMetadata(object):
 
     def __init__(self):
-        data = self.open_file()
-        header = data.pop(0)
+        # data = self.open_file()
+        # header = data.pop(0)
 
-        df = pd.DataFrame.from_records(
-            [dict(zip(header, row)) for row in data])
+        # df = pd.DataFrame.from_records(
+        #     [dict(zip(header, row)) for row in data])
 
-        df['sort_parameters'] = df['sort_parameters'].map(
-            SORT_ENCODER)
+        # df['sort_parameters'] = df['sort_parameters'].map(
+        #     SORT_ENCODER)
 
-        self.data = df.to_dict('records')
+        # self.data = df.to_dict('records')
+
+        self.data = [{"project": "SPECTRUM", "unique_id": "Sample_045LA_CD45N_IGO_09443_X_4", "nick_unique_id": "SPECTRUM-OV-045_S1_CD45N_LEFT_ADNEXA", "aliquot_id": "OV-045-LAdnx-CD45N-S1", "sample_id": "OV-045-LAdnx",
+                      "patient_id": "SPECTRUM-OV-045",	"cancer_type": "hgsoc", "tumour_site": "left adnexa", "tumour_subsite": "", "tumour_type": "primary", "sort_parameters": "CD45N", "therapy": "pre-Rx", "time": "S1", "qc_status": "Pass"}]
 
     def open_file(self):
         creds = None
