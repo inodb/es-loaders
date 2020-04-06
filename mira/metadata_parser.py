@@ -32,7 +32,10 @@ class MiraMetadata(object):
         # self.data = df.to_dict('records')
 
         self.data = [{"project": "SPECTRUM", "unique_id": "Sample_045LA_CD45N_IGO_09443_X_4", "nick_unique_id": "SPECTRUM-OV-045_S1_CD45N_LEFT_ADNEXA", "aliquot_id": "OV-045-LAdnx-CD45N-S1", "sample_id": "OV-045-LAdnx",
-                      "patient_id": "SPECTRUM-OV-045",	"cancer_type": "hgsoc", "tumour_site": "left adnexa", "tumour_subsite": "", "tumour_type": "primary", "sort_parameters": "CD45N", "therapy": "pre-Rx", "time": "S1", "qc_status": "Pass"}]
+                      "patient_id": "SPECTRUM-OV-045",	"cancer_type": "hgsoc", "tumour_site": "left adnexa", "tumour_subsite": "", "tumour_type": "primary", "sort_parameters": "CD45N", "therapy": "pre-Rx", "time": "S1", "qc_status": "Pass"},
+                      {"project": "human_liver_nature_2019", "unique_id": "patient1_sample1", "nick_unique_id": "patient1_sample1", "aliquot_id": "045-LAdnx-CD45N-S1", "sample_id": "sample1",
+                      "patient_id": "patient1",	"cancer_type": "liver", "tumour_site": "liver", "tumour_subsite": "", "tumour_type": "primary", "sort_parameters": "sample1", "therapy": "pre-Rx", "time": "T1", "qc_status": "Pass"}
+                      ]
 
     def open_file(self):
         creds = None

@@ -1,141 +1,79 @@
-B cell:
-  - VIM
-  - MS4A1
-  - CD79A
-  - PTPRC
-  - CD19
-  - BANK1
-  - CD24
-  - IGKC
-Plasma cell:
-  - VIM
-  - CD79A
-  - PTPRC
-  - SDC1
-  - IGKC
-  - IGHG1
-  - IGHG2
-  - CAV1 # Many articles list CAV-1 as an expressed gene in plasma cells and as a potential target in multiple myeloma
-CD4 T cell:
-  - VIM
-  - CD2
-  - CD3D
-  - CD3E
-  - CD3G
-  - CD4
-  - PTPRC
-  - TRAC
-  - TCF7
-Cytotoxic T cell:
-  - VIM
-  - CD2
-  - CD3D
-  - CD3E
-  - CD3G
-  - CD8A
-  - GZMA
-  - PRF1
-  - NKG7
-  - PTPRC
-  - GZMB
-  - TRAC
-T reg cell:
-  - VIM
-  - CD2
-  - CD3D
-  - CD3E
-  - CD3G
-  - CD4
-  - PTPRC
-  - FOXP3
-  - IL2RA
-  - TRAC
-NK cell:
-  - VIM
-  - CD2
-  - PTPRC
-  - GZMA
-  - PRF1
-  - NKG7
-  - GZMB
-  - NCAM1
-  - TRDC
-  - FCGR3A
-  - KLRF1
-  - FCER1G
-Monocyte/Macrophage:
-  - VIM
-  - CD14
-  - FCGR3A
-  - CD33
-  - ITGAX
-  - ITGAM
-  - CD4
-  - PTPRC
-  - LYZ
-  - FCER1G
-  - DAB2
-pDC:
-  - VIM
-  - PTPRC
-  - IL3RA
-  - CD4
-  - CLEC4C # BDCA-2
-  - IRF7 # https://www.sciencedirect.com/book/9780123741455/handbook-of-cell-signaling; https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1003118
-  - IRF8 # https://www.nature.com/articles/ni.3789
-  - GZMB # https://www.ncbi.nlm.nih.gov/pubmed/19965634
-  - FCER1G
-Ovarian cancer cell:
-  - EPCAM
-  - WFDC2
-  - CD24
-  - WT1
-  - CLDN3
-  - CLDN4
-  - KRT8
-  - KRT18
-  - KRT19
-  - MSLN
-  - FOLR1 # Folate receptor
-# Normal surface epithelium (mesothelial) -- markers from http://clincancerres.aacrjournals.org/content/11/18/6422, https://www.nature.com/articles/1201769.pdf, https://academic.oup.com/edrv/article/22/2/255/2424131
-Mesothelial cell: 
-  - MSLN 
-  - WFDC2
-  - WT1
-  - KRT8
-  - KRT18
-  - KRT19
-  - VIM # mesothelial cells are VIM+
-  - COL1A1
-  - COL3A1
-  - ACTA2
-  - RARRES1
-  - CAV1
-  - DAB2
-Myofibroblast:
-  - VIM
-  - ACTA2
-  - COL1A1
-  - COL3A1
-  - SDC1
-  - DAB2
-  - CAV1
-Vascular SMC:
-  - VIM
-  - ACTA2
-  - MYH11
-  - MCAM
-  - COL1A1
-  - COL3A1
-  - DAB2
-  - CAV1
-Endothelial cell:
-  - VIM
-  - EMCN
-  - CLEC14A
-  - CDH5
-  - PECAM1
+Hepatocytes:
+  - ALB
+  - HAMP
+  - ARG1
+  - PCK1
+  - AFP
+  - BCHE
+LSECs:
+  - CALCRL
+  - FCGR2B
   - VWF
-  - MCAM
-  - IL3RA # Express CD123 as well, but to lower extent than DC
-  - CAV1
+Cholangiocytes:
+  - KRT19
+  - EPCAM
+  - CLDN4
+  - CLDN10
+  - SOX9
+  - MMP7
+  - CXCL1
+  - CFTR
+  - TFF2
+Hepatic Stellate Cells:
+  - ACTA2
+  - COL1A1
+  - COL1A2
+  - COL3A1
+  - DCN
+  - MYL9
+Macrophages:
+  - CD68
+  - MARCO
+  - FCGR3A
+  - LYZ
+  - PTPRC
+ab T cells:
+  - CD2
+  - CD3D
+  - TRAC
+  - IL32
+  - CD3E
+  - PTPRC
+gd T cells:
+  - NKG7
+  - FCGR3A
+  - HOPX
+  - GNLY
+  - KLRF1
+  - CMC1
+  - CCL3
+  - PTPRC
+NK cells:
+  - GZMK
+  - KLRF1
+  - CCL3
+  - CMC1
+  - NKG7
+  - PTPRC
+Plasma cells:
+  - CD27
+  - IGHG1
+  - CD79A
+  - IGHG2
+  - PTPRC
+  - IGKC
+Mature B cells: 
+  - MS4A1
+  - LTB
+  - CD52
+  - IGHD
+  - CD79A
+  - PTPRC
+  - IGKC
+Erythroid cells:
+  - HBB
+  - SLC25A37
+# these genes did not work in the workshop
+# https://github.com/kieranrcampbell/r-workshop-march-2019/issues/5
+#  - CA1
+#  - ALAS2
